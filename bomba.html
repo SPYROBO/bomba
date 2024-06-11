@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomba</title>
+    <link rel="icon" href="c4.png">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="cont-bomba">
+        <div class="seccion">
+            <div class="minutos" id="minutos">--</div>
+            <p>MINUTOS</p>
+        </div>
+        <div class="seccion">
+            <div class="segundos" id="segundos">--</div>
+            <p>SEGUNDOS</p>
+        </div>
+    </div>
+    <div class="cont-pad">
+        <div class="desactivar">
+            <input type="button" onclick="detener()" id="frenar" value="frenar" />
+        </div>
+    </div>
+    <script src="bomba.js"></script>
+</body>
+</html>
