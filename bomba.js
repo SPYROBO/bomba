@@ -1,6 +1,22 @@
-var minutos = 1;
-var segundos = 0;
+var minutos = 0
+var segundos = 0
 var frenar = document.getElementById('frenar')
+let codigo = document.getElementById("codigo")
+let mezcla = [];
+let tiempo = 0;
+const lobby = document.getElementById("inicio")
+const bomba = document.getElementById("bomba")
+function asignar(){
+    minutos = parseInt(document.getElementById("elegir_minutos").value);
+    segundos = parseInt(document.getElementById("elegir_segundos").value);
+    bomba.hidden = false
+    lobby.hidden = true
+    //Ejecutar cada segundo pero solo cuando lo asigne
+
+    tiempo = setInterval(cargarSegundo, 1000);
+
+}
+
 //Definir y ejecutar los segundos
 function cargarSegundo(){
     var txtSegundos;
@@ -44,11 +60,10 @@ function explotar(segundos, minutos){
         
     }
 }
-//Ejecutar cada segundo
-var tiempo = setInterval(cargarSegundo, 1000);
 
 //Pausar el temporizador
 function detener(){
+    
     var eliminación = setTimeout(() => {
         clearInterval(tiempo)
     alert("La bomba se detuvo :)")

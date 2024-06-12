@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bomba</title>
     <link rel="icon" href="c4.png">
     <link href="style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="cont-bomba">
-        <div class="seccion">
-            <div class="minutos" id="minutos">--</div>
-            <p>MINUTOS</p>
-        </div>
-        <div class="seccion">
-            <div class="segundos" id="segundos">--</div>
-            <p>SEGUNDOS</p>
-        </div>
+    <div id="inicio">
+        <h3>Elija el código</h3>
+        <input type="text" maxlength="4" id="codigo">
+        <h3>Elija la cantidad de minutos</h3>
+        <input type="text" id="elegir_minutos" maxlength="2" value="0">
+        <h3>Elija la cantidad de segundos</h3>
+        <input type="text" id="elegir_segundos" maxlength="2" value="0">
+        <br>
+        <input type="button" value="Continar" onclick="asignar()">
     </div>
-    <div class="cont-pad">
-        <div class="desactivar">
-            <input type="button" onclick="detener()" id="frenar" value="frenar" />
+    <div id="bomba" hidden>
+        <div class="cont-bomba">
+            <div class="seccion">
+                <div class="minutos" id="minutos">--</div>
+                <p>MINUTOS</p>
+            </div>
+            <div class="seccion">
+                <div class="segundos" id="segundos">--</div>
+                <p>SEGUNDOS</p>
+            </div>
+        </div>
+        <div class="cont-pad">
+            <div class="desactivar">
+                <input type="text" placeholder="Escriba aquí el código" id="adivinar_codigo" maxlength="4">
+                <input type="button" onclick="detener()" id="frenar" value="frenar" />
+            </div>
         </div>
     </div>
     <script src="bomba.js"></script>
 </body>
+
 </html>
