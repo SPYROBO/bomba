@@ -12,14 +12,14 @@
 
 <body>
     <div id="inicio">
-        <h3>Elija el código</h3>
-        <input type="text" maxlength="4" id="codigo">
-        <h3>Elija la cantidad de minutos</h3>
-        <input type="text" id="elegir_minutos" maxlength="2" value="0">
-        <h3>Elija la cantidad de segundos</h3>
-        <input type="text" id="elegir_segundos" maxlength="2" value="0">
+        <h3 class="parrafo">Elija el código</h3>
+        <input type="text" maxlength="4" id="codigo" class="texto" value="0000">
+        <h3 class="parrafo">Elija la cantidad de minutos</h3>
+        <input type="text" id="elegir_minutos" maxlength="2" value="0" class="texto"> 
+        <h3 class="parrafo">Elija la cantidad de segundos</h3>
+        <input type="text" id="elegir_segundos" maxlength="2" value="10" class="texto">
         <br>
-        <input type="button" value="Continar" onclick="asignar()">
+        <input type="button" value="Continar" onclick="asignar()" class="btn"> 
     </div>
     <div id="bomba" hidden>
         <div class="cont-bomba">
@@ -34,8 +34,13 @@
         </div>
         <div class="cont-pad">
             <div class="desactivar">
-                <input type="text" placeholder="Escriba aquí el código" id="adivinar_codigo" maxlength="4">
-                <input type="button" onclick="detener()" id="frenar" value="frenar" />
+                <p id="estado"></p>
+                <br>
+                <input type="text" placeholder="Escriba aquí el código" id="adivinar_codigo" maxlength="4" class="texto">
+                <br>
+                <input type="button" onclick="detener()" id="frenar" value="Frenar" class="btn">
+                <br>
+                <input type="button" onclick="volver()" id="volver" value="Toque para regresar" class="btn" hidden>
             </div>
         </div>
     </div>
